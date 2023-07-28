@@ -25,19 +25,30 @@
 
 <body>
     <div id="app">
-        <button type="button" v-bind:class="(btnClick === true ? 'btn btn-primary disabled-btn' : 'btn btn-primary')"
-            @click="getMailApi()">
-            Genera e-mail
-        </button>
-        <button type="button" class="btn btn-primary" @click="reload()">
-            Ricarica la pagina
-        </button>
-
-        <ul class="list-group list-group-numbered">
-            <li class="list-group-item" v-if="emailsCreated.length === 10" v-for="email in emailsCreated">
-                {{ email }}
-            </li>
-        </ul>
+        <main class="bg-primary vh-100">
+            <div class="container">
+                <h1 class="fs-1 text-uppercase text-white text-center fw-bold m-0 pb-3">
+                    Genera 10 e-mail casuali
+                </h1>
+                <!-- Pulsanti -->
+                <div class="d-flex justify-content-center pt-3 pb-3">
+                    <button type="button"
+                        v-bind:class="(btnClick === true ? 'btn btn-primary me-2 disabled-btn fs-5' : 'btn btn-primary me-2 fs-5')"
+                        @click="getMailApi()">
+                        Start
+                    </button>
+                    <button type="button" class="btn btn-primary ms-2 fs-5" @click="reload()">
+                        Reload
+                    </button>
+                </div>
+                <!-- Lista di e-mail generate -->
+                <ul class="my-list-group list-group-numbered pt-3 rounded-3 fs-5">
+                    <li class="list-group-item" v-if="emailsCreated.length === 10" v-for="email in emailsCreated">
+                        {{ email }}
+                    </li>
+                </ul>
+            </div>
+        </main>
     </div>
 
     <!-- Custom Js -->

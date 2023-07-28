@@ -1,4 +1,41 @@
+:root {
+    --bs-primary: #1A5D1A;
+    --bs-primary-rgb: 26, 93, 26;
+}
+
+main {
+    padding-top: 200px;
+}
+
 .disabled-btn {
     pointer-events: none;
     opacity: 0.5;
+}
+
+.btn-primary {
+    --bs-btn-bg: #8C3333;
+    --bs-btn-border-color: #8C3333;
+    --bs-btn-hover-bg: #722c2c;
+    --bs-btn-hover-border-color: #722c2c;
+    --bs-btn-active-bg: #722c2c;
+    --bs-btn-active-border-color: #722c2c;
+}
+
+.my-list-group {
+    --bs-list-group-item-padding-x: 1rem;
+    --bs-list-group-item-padding-y: 0.5rem;
+    --bs-list-group-border-color: #481a1a;
+    --bs-list-group-border-width: var(--bs-border-width);
+    --bs-list-group-bg: #8C3333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: auto;
+    text-align: center;
+    width: 500px;
+}
+
+.my-list-group > li {
+    box-shadow: 5px 5px 10px #2b2b2c;
 }
