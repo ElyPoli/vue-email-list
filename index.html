@@ -26,11 +26,15 @@
 <body>
     <div id="app">
         <button type="button" v-bind:class="(btnClick === true ? 'btn btn-primary disabled-btn' : 'btn btn-primary')"
-            @click="getMailApi(emailsCreated, btnClick)">
+            @click="getMailApi()">
             Genera e-mail
         </button>
+        <button type="button" class="btn btn-primary" @click="reload()">
+            Ricarica la pagina
+        </button>
+
         <ul class="list-group list-group-numbered">
-            <li class="list-group-item" v-for="email in emailsCreated">
+            <li class="list-group-item" v-if="emailsCreated.length === 10" v-for="email in emailsCreated">
                 {{ email }}
             </li>
         </ul>

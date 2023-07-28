@@ -21,6 +21,12 @@ const app = Vue.createApp({
             }
 
             this.btnClick = true; // disattivo il pulsante dopo il click
+        },
+        /**
+         * Ricarica la pagina
+         */
+        reload() {
+            location.reload();
         }
     },
 })
