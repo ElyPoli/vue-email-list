@@ -25,6 +25,15 @@
 
 <body>
     <div id="app">
+        <button type="button" v-bind:class="(btnClick === true ? 'btn btn-primary disabled-btn' : 'btn btn-primary')"
+            @click="getMailApi(emailsCreated, btnClick)">
+            Genera e-mail
+        </button>
+        <ul class="list-group list-group-numbered">
+            <li class="list-group-item" v-for="email in emailsCreated">
+                {{ email }}
+            </li>
+        </ul>
     </div>
 
     <!-- Custom Js -->
